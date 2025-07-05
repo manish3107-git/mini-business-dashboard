@@ -1,5 +1,3 @@
-# mini-business-dashboard
-This project is a local business dashboard built using React (frontend) and Express.js (backend). It allows users to enter a business name and location, then displays simulated ratings, reviews, and a dynamic SEO-friendly headline.
 # 🌐 Local Business Dashboard – GrowthProAI Assignment
 
 This is a **full-stack web application** built for the **GrowthProAI Full Stack Intern Assignment**. It simulates local business discovery by generating ratings, reviews, and SEO headlines for businesses using frontend forms and backend API logic.
@@ -26,6 +24,24 @@ This is a **full-stack web application** built for the **GrowthProAI Full Stack 
 
 ---
 
+## 📁 Folder Structure
+
+local-buisness-dashboard/
+├── Backend/ # Node.js Express API
+│ └── index.js
+├── public/
+├── src/
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ ├── index.css
+│ ├── BusinessForm.js
+│ └── BusinessCard.js
+├── package.json
+└── README.md
+
+
+
 ## ⚙️ How to Run the Project
 
 ### 1️⃣ Start the Backend API
@@ -48,10 +64,20 @@ App runs on: http://localhost:3000
 📌 Sample Output
 After submission:
 
+
 Cool Cafe (Mumbai)
 ⭐ Rating: 4.5
 🗣 Reviews: 127
 "Cool Cafe is the Rising Star of Mumbai in 2025"
 [ Regenerate SEO Headline ]
+📦 API Endpoints
+POST /business-data
+Accepts: { name, location }
 
+Returns: { rating, reviews, headline }
+
+GET /regenerate-headline
+Accepts query: ?name=...&location=...
+
+Returns: { headline }
 
